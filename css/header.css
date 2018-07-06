@@ -34,9 +34,19 @@
 .hamburger-menu-hints:hover {
 	color: white;
 	transform: rotateY(360deg);
+	animation-name: rotationQuestion;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
 }
 
-
+@-webkit-keyframes rotationQuestion {
+	from {
+		transform: rotateY(0deg);
+	}
+	to {
+		transform: rotateY(360deg);
+	}
+}
 
 .wrapper-logo {
 	grid-area: w-logo;
