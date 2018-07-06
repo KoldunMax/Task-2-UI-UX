@@ -1,0 +1,94 @@
+.hamburger-menu {
+	grid-area: h-menu;
+	cursor: pointer;
+	transition: .5s color;
+}
+
+.hamburger-menu:hover {
+	color: var(--AccentColorLighten);
+}
+
+.hamburger-menu-hints {
+	grid-area: h-menu-hints;
+	transition: color .5s;
+	padding: 0px 10px 0px 10px;
+	animation-name: blinkingQuestion;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	cursor: pointer;
+	transition: 1s;
+}
+
+@-webkit-keyframes blinkingQuestion {
+	0% {
+		color: white;
+	}
+	50% {
+		color: var(--AccentColorLighten);
+	}
+	100% {
+		color: white;
+	}
+}
+
+.hamburger-menu-hints:hover {
+	color: white;
+	transform: rotateY(360deg);
+}
+
+
+
+.wrapper-logo {
+	grid-area: w-logo;
+}
+
+header {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-areas: 
+		"h-menu . h-menu-hints"
+		"w-logo w-logo w-logo";
+	background: linear-gradient(180deg, var(--AccentColorDarken), var(--AccentColor));
+	font-size: 2em;
+}
+
+.hamburger-menu,
+.hamburger-menu-hints {
+	justify-self: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: white;
+}
+
+.wrapper-logo .logo-small-screen {
+	display: block;
+	height: 160px;
+	width: 140px;
+	margin: 20px auto 20px auto;
+}
+
+.wrapper-logo .logo-small-screen:hover {
+	animation-name: rotate-logo;
+	animation-duration: 1s;
+}
+
+
+@-webkit-keyframes rotate-logo {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(5deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+
