@@ -1,0 +1,144 @@
+main {
+	background-color: var(--AccentColorLighten);
+	text-align: center;
+	font-size: 30px;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	padding: 10px;
+}
+
+.wrapper-day-of-week {
+	margin: 20px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+}
+
+.wrapper-day-of-week h3 {
+	margin: 0;
+	padding: 30px;
+	background-color: var(--AccentColor);
+	border-radius: 15px;
+	color: white;
+	animation-name: examplePressedButton;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	box-shadow: 0px 8px rgba(0,0,0,.5);
+	cursor: pointer;
+	transition: .5s;
+}
+
+.wrapper-day-of-week h3:hover {
+	background-color: var(--AccentColorDarken);
+}
+
+.wrapper-day-of-week h3:active {
+	box-shadow: 0px 3px rgba(0,0,0,.9);
+	transform: translateY(5px);
+	background-color: var(--PressedButtom);
+	color: black;
+}
+
+@-webkit-keyframes examplePressedButton{
+	80% {
+		box-shadow: 0px 8px rgba(0,0,0,.5);
+		transform: translateY(0px);
+		background-color: var(--AccentColor);
+		color: white;
+	}
+	85% {		
+		box-shadow: 0px 3px rgba(0,0,0,.9);
+		transform: translateY(5px);
+		background-color: var(--PressedButtom);
+		color: black;
+	}
+	100% {
+		transform: translateY(0px);
+		background-color: var(--AccentColor);
+		box-shadow: 0px 8px rgba(0,0,0,.5);
+		color: white;
+	}
+}
+
+.shift-day {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, 1fr);
+	grid-gap: 20px;
+	font-size: 20px;
+}
+
+.shift-day p.time{
+	display: block;
+	border: 2px solid black;
+	place-self: center;
+	width:100%;
+	padding: 8px;
+	border-radius: 5px;
+	background-color: var(--PressedButtom);
+}
+
+.wrapper-shifts h4.title-dayly-shift{
+	background-color: var(--AccentColor);
+	letter-spacing: 1px;
+	color: white;
+	padding: 10px;
+	margin-top: 50px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	box-shadow: 0px 8px rgba(0,0,0,.5);
+	animation-name: examplePressedButtonShift;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes examplePressedButtonShift{
+	20% {
+		box-shadow: 0px 8px rgba(0,0,0,.5);
+		transform: translateY(0px);
+		background-color: var(--AccentColor);
+		color: white;
+	}
+	25% {		
+		box-shadow: 0px 3px rgba(0,0,0,.9);
+		transform: translateY(5px);
+		background-color: var(--PressedButtom);
+		color: black;
+	}
+	35% {
+		transform: translateY(0px);
+		background-color: var(--AccentColor);
+		box-shadow: 0px 8px rgba(0,0,0,.5);
+		color: white;
+	}
+}
+
+.wrapper-shifts .fa-sun-o {
+	color: orange;
+	margin-left: 15px;
+	animation: rotatingSun 4s infinite linear, changeColor 15s infinite;
+}
+
+@-webkit-keyframes changeColor {
+	20% {
+		color: orange;
+	}
+	25% {		
+		color: black;
+	}
+	35% {
+		color: orange;
+	}
+}
+
+@-webkit-keyframes rotatingSun {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+

@@ -1,0 +1,14 @@
+@media all and (max-width: 375px) {
+	.shift-day p.time{
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	.wrapper-shifts h4.title-dayly-shift{
+		width: 95%;
+	}
+}
+
+@media all and (max-width: 320px) {
+	
+}
