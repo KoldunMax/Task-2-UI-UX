@@ -17,7 +17,7 @@ main {
 	grid-template-rows: auto;
 }
 
-.wrapper-day-of-week h3 {
+.wrapper-day-of-week h3.name-of-day {
 	margin: 0;
 	padding: 30px;
 	background-color: var(--AccentColor);
@@ -31,15 +31,8 @@ main {
 	transition: .5s;
 }
 
-.wrapper-day-of-week h3:hover {
+.wrapper-day-of-week h3.name-of-day:hover {
 	background-color: var(--AccentColorDarken);
-}
-
-.wrapper-day-of-week h3:active {
-	box-shadow: 0px 3px rgba(0,0,0,.9);
-	transform: translateY(5px);
-	background-color: var(--PressedButtom);
-	color: black;
 }
 
 @-webkit-keyframes examplePressedButton{
@@ -83,9 +76,14 @@ main {
 	color: white;
 	box-shadow: 0px 4px rgba(0,0,0,.5);
 	background-color: var(--TimesButton);
+	cursor: pointer;
 }
 
-.wrapper-shifts h4.title-dayly-shift{
+.shift-day p.time:hover {
+	background-color: var(--AccentColorDarken);
+}
+
+.wrapper-shifts h4.title-dayly-shift {
 	background-color: var(--AccentColor);
 	letter-spacing: 1px;
 	color: white;
@@ -100,10 +98,15 @@ main {
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
 	text-align: center;
+	cursor: pointer;
 }
 
 h4.title-dayly-shift span {
 	font-size: 16px;
+}
+
+.wrapper-shifts h4.title-dayly-shift:hover {
+	background-color: var(--AccentColorDarken);
 }
 
 @-webkit-keyframes examplePressedButtonShift{
