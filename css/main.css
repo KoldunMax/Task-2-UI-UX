@@ -78,7 +78,11 @@ main {
 	width:100%;
 	padding: 8px;
 	border-radius: 5px;
-	background-color: var(--PressedButtom);
+	padding-top: 12px;
+	padding-bottom: 12px;
+	color: white;
+	box-shadow: 0px 4px rgba(0,0,0,.5);
+	background-color: var(--TimesButton);
 }
 
 .wrapper-shifts h4.title-dayly-shift{
@@ -95,6 +99,11 @@ main {
 	animation-name: examplePressedButtonShift;
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
+	text-align: center;
+}
+
+h4.title-dayly-shift span {
+	font-size: 16px;
 }
 
 @-webkit-keyframes examplePressedButtonShift{
