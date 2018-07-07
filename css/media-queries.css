@@ -29,10 +29,28 @@
 
 	.shift p.time {
 		font-weight: bold;
+		padding: 20px;
+		font-size: 24px;
 	}
     
 	.wrapper-shifts h4.title-shift .fa-clock-o {
 		font-size: 20px;
+	}
+
+	.fixed-header-small-screens {
+		height: 10%;
+	}
+
+	.sidenav {
+		text-align: center;
+	}
+
+	.wrapper-attention {
+		font-size: 20px;
+	}
+
+	.shift {
+		grid-column-gap: 60px;
 	}
 }
 
@@ -84,5 +102,17 @@
 		padding: 10px 2px 10px 2px;
 		line-height: 40px;
 	}
+		
+	.fixed-header-small-screens {
+		display: none;
+	}
 
+	.shift {
+		grid-column-gap: 30px;
+	}
+
+	.shift p.time {
+		font-weight: bold;
+		font-size: 15px;
+	}
 }
