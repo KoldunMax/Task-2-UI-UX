@@ -1,18 +1,20 @@
 .sidenav {
 	left: 0;
 	height: 100%;
+	top: 0;
 	width: 0;
 	background-color: #111;
 	position: fixed;
-	top: 0;
 	z-index: 1;
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 60px;
 	font: normal 100% "century gothic", arial, sans-serif;
+	opacity: .95;
+	z-index: 3;
 }
 
-.sidenav a {
+.sidenav a{
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 25px;
@@ -26,8 +28,7 @@
 	padding: 8px 8px 8px 32px;
 	color: #818181;
 	font-size: 12px;
-	bottom: 10px;
-	position: absolute;
+	margin-top: 5%;
 }
 
 .wrapper-attention i {

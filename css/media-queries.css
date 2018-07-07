@@ -1,26 +1,118 @@
-@media all and (max-width: 375px) {
-	.shift-day p.time{
-		font-size: 14px;
-		font-weight: bold;
+@media all and (min-width: 320px) {
+	.shift {
+		grid-gap: 10px;
 	}
-
-	.wrapper-shifts h4.title-dayly-shift{
+	.shift p.time {
+		font-size: 13px;
+		font-weight: bold;
+		align-self: center;
+	}
+	.wrapper-shifts h4.title-shift{
 		width: 95%;
+		font-size: 24px;
 	}
 }
 
-@media all and (max-width: 768px) {
-	.wrapper-shifts h4.title-dayly-shift:active,
-	.wrapper-day-of-week h3.name-of-day:active {
-		animation: none;
-		box-shadow: 0px 3px rgba(0,0,0,.9);
-		transform: translateY(5px);
-		background-color: var(--PressedButtom);
-		color: black;
+@media all and (min-width: 375px) {
+	.shift p.time {
+		font-size: 16px;
+	}
+}
+
+@media all and (min-width: 425px) {
+	.shift p.time {
+		font-size: 16px;
+	}
+}	
+
+@media all and (min-width: 768px) {
+
+	.shift p.time {
+		font-weight: bold;
+		padding: 20px;
+		font-size: 24px;
+	}
+    
+	.wrapper-shifts h4.title-shift .fa-clock-o {
+		font-size: 20px;
 	}
 
-	.wrapper-shifts h4.title-dayly-shift:active .fa-sun-o {
-		animation: rotatingSun 4s infinite linear;
-		color: black;
+	.fixed-header-small-screens {
+		height: 10%;
+	}
+
+	.sidenav {
+		text-align: center;
+	}
+
+	.wrapper-attention {
+		font-size: 20px;
+	}
+
+	.shift {
+		grid-column-gap: 60px;
+	}
+}
+
+@media all and (min-width: 1024px) {
+
+
+	main .wrapper-shifts {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		grid-template-areas: 
+			"d-shift-ttl e-shift-ttl n-shift-ttl"
+			"d-shift e-shift n-shift"
+			"d-shift e-shift n-shift";
+		grid-column-gap: 55px;
+		justify-content: space-between;
+	}
+
+	.wrapper-shifts h4.title-shift {
+		width: 100%;
+	}
+
+	.wrapper-shifts h4.shift-day-title {
+		grid-area: d-shift-ttl;
+	}
+
+	.wrapper-shifts h4.shift-evening-title {
+		grid-area: e-shift-ttl;
+	}
+
+	.wrapper-shifts h4.shift-night-title {
+		grid-area: n-shift-ttl;
+	}
+	
+	.shift-day {
+		grid-area: d-shift;
+	}
+
+	.shift-evening {
+		grid-area: e-shift;
+	}
+
+	.shift-night {
+		grid-area: n-shift;
+	}
+
+	.shift p.time {
+		font-size:  15px;
+		font-weight: bold;
+		padding: 10px 2px 10px 2px;
+		line-height: 40px;
+	}
+		
+	.fixed-header-small-screens {
+		display: none;
+	}
+
+	.shift {
+		grid-column-gap: 30px;
+	}
+
+	.shift p.time {
+		font-weight: bold;
+		font-size: 15px;
 	}
 }
