@@ -70,14 +70,16 @@ header {
 	color: white;
 }
 
-.wrapper-logo .logo-small-screen {
+.wrapper-logo .logo-small-screen,
+.wrapper-logo .logo-large-screen {
 	display: block;
 	height: 160px;
 	width: 140px;
 	margin: 20px auto 20px auto;
 }
 
-.wrapper-logo .logo-small-screen:hover {
+.wrapper-logo .logo-small-screen:hover, 
+.wrapper-logo .logo-large-screen:hover{
 	animation-name: rotate-logo;
 	animation-duration: 1s;
 }
