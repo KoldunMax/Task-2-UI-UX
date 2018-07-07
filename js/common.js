@@ -25,6 +25,25 @@ openBtnNav[0].addEventListener("click", openNav);
 closeBtnNav[0].addEventListener("click", closeNav);
 fixedMenu.getElementsByClassName("hamburger-menu")[0].addEventListener("click", openNav);
 
+for(let i = 1; i < 8; i++) {
+		sidenavs[0].children[i].addEventListener("click", (e) => {
+		e.preventDefault();
+		document.getElementsByClassName("wrapper-day-of-week")[i-1].scrollIntoView();
+		window.scrollBy(0, -100);
+		closeNav(e);
+	})
+}
+
+console.log(document.getElementsByClassName("wrapper-day-of-week")[6]);
+
+sidenavs[0].children[8].addEventListener("click", (e) => {
+	e.preventDefault();
+	document.getElementsByTagName("aside")[0].scrollIntoView();
+	window.scrollBy(0, 30);
+	closeNav(e);
+});
+
+
 function openNav(e) {
    	sidenavs[0].style.width = "100%";
 }

@@ -108,7 +108,7 @@ header {
 	background: linear-gradient(180deg, var(--AccentColorDarken), var(--AccentColor));
 	width: 100%;
 	border-bottom: 2px solid var(--AccentColorDarken);
-	height: 10%;
+	height: 75px;
 	align-content: center;
 	justify-content: space-around;
 	z-index: 1;

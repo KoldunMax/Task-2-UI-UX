@@ -1,0 +1,94 @@
+.doctor-card {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-top: solid 3px black;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;	
+	justify-items: center;
+	border: 2px solid black;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 35px;
+	grid-template-areas: 
+		"d-icon contat-i-f"
+		"d-icon contat-i-s"
+		"d-icon contat-i-t"
+		"d-icon contat-i-fh"
+		"title-d contat-i-ff";
+
+
+}
+
+.doctor-card img.doctor-icon {
+	border-radius: 100%;
+	grid-area: d-icon;
+}
+
+.doctor-card h5.name-customer {
+	font-size: 26px;
+	margin: 20px;
+	letter-spacing: 1px;
+	grid-area: title-d;
+}
+
+.doctor-card .contact-info {
+	padding: 15px;
+	letter-spacing: 1px;
+	text-align: left;
+	font-weight: bold;
+	align-self: center;
+	border-bottom: 2px solid black;
+	width: 85%;
+	font-size: 1.2em;
+}
+
+.doctor-card .contact-info:nth-child(1) {
+	grid-area: contat-i-f;
+}
+.doctor-card .contact-info:nth-child(2) {
+	grid-area: contat-i-s;
+}
+.doctor-card .contact-info:nth-child(3) {
+	grid-area: contat-i-t;
+}
+.doctor-card .contact-info:nth-child(4) {
+	grid-area: contat-i-fh;
+}
+
+.doctor-card .contact-info:nth-child(5) {
+	grid-area: contat-i-ff;
+	margin-bottom: 20px;
+}
+
+.button-submit {
+	padding: 15px 30px 15px 30px;
+	background-color: rgb(173,255,47);
+	border: 2px solid black;
+	text-align: center;
+	width: 80%;
+	margin: auto;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 40px;
+	transition: 1s;
+}
+
+.button-submit:hover {
+	background-color: rgb(34,139,34);
+}
+
+.title-aside-card {
+	text-align: center;
+	margin-top: 40px;
+	color: white;
+	padding: 10px 30px 10px 30px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	background-color: var(--AccentColorDarken);
+}
+
