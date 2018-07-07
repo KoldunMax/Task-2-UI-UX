@@ -47,6 +47,19 @@
 }
 
 @media all and (min-width: 320px) and (max-width: 768px) {
+	.modal-success {
+		font-size: 18px;
+	}
+
+	.modal-content img {
+		margin-left: 15px;
+		height: 16px;
+	}
+	
+	.modal-success .modal-content {
+		width: 80%;
+	}
+
 	footer .helps-link {
 		flex-direction: column;
 		justify-content: center;
