@@ -165,7 +165,12 @@ var modal = document.getElementsByClassName('modal-success')[0];
 
 var btn = document.getElementsByClassName("button-submit")[0];
 
-var span = document.getElementsByClassName("close")[0];
+var span = modal.getElementsByClassName("close")[0];
+
+var hintsBtn = document.getElementsByClassName("hamburger-menu-hints");
+var modalHints = document.getElementsByClassName('modal-hint-large')[0];
+let spanHint = modalHints.getElementsByClassName("close")[0];
+
 
 btn.onclick = function() {
     modal.style.display = "block";
@@ -175,8 +180,22 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
-window.onclick = function(event) {
+spanHint.addEventListener("click", () => {
+		modalHints.style.display = "none";
+})
+
+window.addEventListener("click", function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+
+    if (event.target == modalHints) {
+        modalHints.style.display = "none";
+    }
+});
+
+for(let i = 0; i < hintsBtn.length; i++) {
+	hintsBtn[i].addEventListener("click", () => {
+		modalHints.style.display = "block";
+	})
 }
