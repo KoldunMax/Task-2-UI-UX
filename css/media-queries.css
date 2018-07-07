@@ -11,6 +11,30 @@
 		width: 95%;
 		font-size: 24px;
 	}
+
+	.doctor-card {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;	
+		grid-template-areas: 
+			"d-icon"
+			"d-icon"
+			"d-icon"
+			"d-icon"
+			"title-d"
+			"contat-i-f"
+			"contat-i-s"
+			"contat-i-t"
+			"contat-i-fh"
+			"contat-i-ff";
+	}
+
+	.doctor-card .contact-info:nth-child(5) {
+		border: none;
+	}
+
+	.doctor-card .contact-info {
+		font-size: 1.2em;
+	}
 }
 
 @media all and (min-width: 375px) {
@@ -26,6 +50,25 @@
 }	
 
 @media all and (min-width: 768px) {
+	.doctor-card {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;	
+		grid-template-areas: 
+			"d-icon contat-i-f"
+			"d-icon contat-i-s"
+			"d-icon contat-i-t"
+			"d-icon contat-i-fh"
+			"title-d contat-i-ff";
+		justify-content: center;
+	}
+
+	.doctor-card .contact-info:nth-child(5) {
+		border-bottom: 2px solid black;
+	}
+
+	.doctor-card .contact-info {
+		font-size: 1.2em;
+	}
 
 	.shift p.time {
 		font-weight: bold;
@@ -35,10 +78,6 @@
     
 	.wrapper-shifts h4.title-shift .fa-clock-o {
 		font-size: 20px;
-	}
-
-	.fixed-header-small-screens {
-		height: 10%;
 	}
 
 	.sidenav {
@@ -114,5 +153,8 @@
 	.shift p.time {
 		font-weight: bold;
 		font-size: 15px;
+	}
+	.doctor-card {
+		width: 80%;
 	}
 }
