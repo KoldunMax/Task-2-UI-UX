@@ -31,9 +31,44 @@
 	.doctor-card .contact-info:nth-child(5) {
 		border: none;
 	}
-
 	.doctor-card .contact-info {
-		font-size: 1.2em;
+		font-size: 0.9em;
+	}
+}
+
+@media all and (min-width: 320px) and (max-width: 375px) {
+	aside h3.title-aside-card {
+		font-size: 16px;
+	}
+
+	aside .contact-info {
+		font-size: 10px;
+	} 
+}
+
+@media all and (min-width: 320px) and (max-width: 768px) {
+	footer .helps-link {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	footer .helps-link ul {
+		order: 1;
+	}
+
+	.footer-item-social {
+		order: 2;
+		margin: auto;
+	}
+
+	.footer-item-social a {
+		justify-items: center;
+	}
+
+	footer .helps-link span {
+		order: 3;
+		display: inline-block;
+		margin: auto;
 	}
 }
 
@@ -47,6 +82,11 @@
 	.shift p.time {
 		font-size: 16px;
 	}
+
+	.button-submit {
+		font-size: 30px;
+	}
+
 }	
 
 @media all and (min-width: 768px) {
@@ -68,6 +108,10 @@
 
 	.doctor-card .contact-info {
 		font-size: 1.2em;
+	}
+
+	.button-submit {
+		font-size: 40px;
 	}
 
 	.shift p.time {
@@ -156,5 +200,15 @@
 	}
 	.doctor-card {
 		width: 80%;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.doctor-card {
+		width: 60%;
+	}
+
+	.button-submit {
+		width: 40%;
 	}
 }

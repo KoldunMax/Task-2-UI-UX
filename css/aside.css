@@ -59,6 +59,7 @@
 
 .doctor-card .contact-info:nth-child(5) {
 	grid-area: contat-i-ff;
+	margin-bottom: 20px;
 }
 
 .button-submit {
@@ -70,7 +71,13 @@
 	margin: auto;
 	border-radius: 10px;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 20px;
+	margin-bottom: 40px;
+	transition: 1s;
+}
+
+.button-submit:hover {
+	background-color: rgb(34,139,34);
 }
 
 .title-aside-card {
@@ -84,3 +91,4 @@
 	border-radius: 10px;
 	background-color: var(--AccentColorDarken);
 }
+
