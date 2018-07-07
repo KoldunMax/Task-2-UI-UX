@@ -8,10 +8,29 @@ main {
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	padding: 10px;
+	overflow: hidden;
 }
 
 .wrapper-day-of-week {
-	margin: 20px;
+	margin: 20px;	
+	animation-name: emergenceBlock;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+@-webkit-keyframes emergenceBlock {
+	0% {
+		transform: translate(-100%);
+	} 
+	70% {
+		transform: translate(10%);
+	}
+	100% {
+		transform: translate(0);
+	}
+}
+
+.wrapper-shifts {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
@@ -23,16 +42,17 @@ main {
 	background-color: var(--AccentColor);
 	border-radius: 15px;
 	color: white;
+	transition: 1s;
 	animation-name: examplePressedButton;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
+	animation-duration: 2s;
 	box-shadow: 0px 8px rgba(0,0,0,.5);
 	cursor: pointer;
-	transition: .5s;
 }
 
 .wrapper-day-of-week h3.name-of-day:hover {
 	background-color: var(--AccentColorDarken);
+	box-shadow: 0px 3px rgba(0,0,0,.9);
+	transform: translateY(5px);
 }
 
 @-webkit-keyframes examplePressedButton{
@@ -56,7 +76,7 @@ main {
 	}
 }
 
-.shift-day {
+.shift {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: repeat(4, 1fr);
@@ -64,11 +84,12 @@ main {
 	font-size: 20px;
 }
 
-.shift-day p.time{
+.shift p.time{
 	display: block;
 	border: 2px solid black;
 	place-self: center;
 	width:100%;
+	letter-spacing: 1px;
 	padding: 8px;
 	border-radius: 5px;
 	padding-top: 12px;
@@ -77,13 +98,53 @@ main {
 	box-shadow: 0px 4px rgba(0,0,0,.5);
 	background-color: var(--TimesButton);
 	cursor: pointer;
+	transition: 1s;
 }
 
-.shift-day p.time:hover {
+.shift p.time:hover {
 	background-color: var(--AccentColorDarken);
+	box-shadow: 0px 2px rgba(0,0,0,.5);
+	transform: translateY(1px);
 }
 
-.wrapper-shifts h4.title-dayly-shift {
+.shift p.time:nth-child(1) {
+	animation-name: examplePressedButtonTime;
+	animation-duration: 6s;
+}
+
+.shift p.time:nth-child(2) {
+	animation-name: examplePressedButtonTime;
+	animation-duration: 6s;
+}
+
+@-webkit-keyframes examplePressedButtonTime{
+	50% {
+		box-shadow: 0px 4px rgba(0,0,0,.5);
+		transform: translateY(0px);
+		background-color: var(--TimesButton);
+		color: white;
+	}
+	55% {		
+		box-shadow: 0px 2px rgba(0,0,0,.5);
+		transform: translateY(1px);
+		background-color: var(--PressedButtom);
+		color: black;
+	}
+	65% {
+		transform: translateY(0px);
+		background-color: var(--TimesButton);
+		box-shadow: 0px 4px rgba(0,0,0,.5);
+		color: white;
+	}
+	100% {
+		transform: translateY(0px);
+		background-color: var(--TimesButton);
+		box-shadow: 0px 4px rgba(0,0,0,.5);
+		color: white;
+	}
+}
+
+.wrapper-shifts h4.title-shift {
 	background-color: var(--AccentColor);
 	letter-spacing: 1px;
 	color: white;
@@ -94,37 +155,46 @@ main {
 	margin-right: auto;
 	border-radius: 10px;
 	box-shadow: 0px 8px rgba(0,0,0,.5);
-	animation-name: examplePressedButtonShift;
-	animation-duration: 15s;
-	animation-iteration-count: infinite;
+	animation: examplePressedButtonShift 3s;
 	text-align: center;
 	cursor: pointer;
+	transition: 1s;
 }
 
-h4.title-dayly-shift span {
+
+
+h4.title-shift span {
 	font-size: 16px;
 }
 
-.wrapper-shifts h4.title-dayly-shift:hover {
+.wrapper-shifts h4.title-shift:hover {
 	background-color: var(--AccentColorDarken);
+	box-shadow: 0px 3px rgba(0,0,0,.9);
+	transform: translateY(5px);
 }
 
-@-webkit-keyframes examplePressedButtonShift{
-	20% {
+@-webkit-keyframes examplePressedButtonShift {
+	80% {
 		box-shadow: 0px 8px rgba(0,0,0,.5);
 		transform: translateY(0px);
 		background-color: var(--AccentColor);
 		color: white;
 	}
-	25% {		
+	85% {		
 		box-shadow: 0px 3px rgba(0,0,0,.9);
 		transform: translateY(5px);
 		background-color: var(--PressedButtom);
 		color: black;
 	}
-	35% {
+	95% {
 		transform: translateY(0px);
 		background-color: var(--AccentColor);
+		box-shadow: 0px 8px rgba(0,0,0,.5);
+		color: white;
+	}
+	100% {
+		transform: translateY(0px);
+		background-color: var(--TimesButton);
 		box-shadow: 0px 8px rgba(0,0,0,.5);
 		color: white;
 	}
@@ -133,17 +203,17 @@ h4.title-dayly-shift span {
 .wrapper-shifts .fa-sun-o {
 	color: orange;
 	margin-left: 15px;
-	animation: rotatingSun 4s infinite linear, changeColor 15s infinite;
+	animation: rotatingSun 4s infinite linear, changeColor 3s; 
 }
 
 @-webkit-keyframes changeColor {
-	20% {
+	80% {
 		color: orange;
 	}
-	25% {		
+	85% {		
 		color: black;
 	}
-	35% {
+	95% {
 		color: orange;
 	}
 }
@@ -154,3 +224,13 @@ h4.title-dayly-shift span {
 	}
 }
 
+.wrapper-shifts h4.title-shift span {
+    display: flex;
+	justify-content: center;
+	margin-top: 12px;
+}
+
+.wrapper-shifts h4.title-shift span i {
+	margin-right: 10px;
+	font-size: 24px;
+}
