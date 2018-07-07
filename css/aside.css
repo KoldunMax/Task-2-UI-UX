@@ -93,7 +93,8 @@
 	background-color: var(--AccentColorDarken);
 }
 
-.modal-success {
+.modal-success,
+.modal-hint-large{
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -109,7 +110,8 @@
     text-align: center;
 }
 
-.modal-success .modal-content {
+.modal-success .modal-content,
+.modal-hint-large .modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -117,7 +119,8 @@
     width: 50%;
 }
 
-.modal-success .close {
+.modal-success .close,
+.modal-hint-large .close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -130,8 +133,25 @@
 }
 
 .modal-success .close:hover,
-.modal-success .close:focus {
+.modal-success .close:focus,
+.modal-hint-large .close:hover,
+.modal-hint-large .close:focus{
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.modal-hint-large .modal-content img {
+	display: block;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.modal-hint-large .modal-content img:nth-child(1) {
+	padding-right: 24px;
+}
+
+.modal-hint-large .modal-content img:nth-child(2) {
+	padding-left: 12px;
 }

@@ -106,6 +106,10 @@
 	.wrapper-logo .logo-large-screen {
 		display: none;
 	}
+
+	.modal-hint-large .modal-content .large-hint-img {
+		display: none;
+	}
 }
 
 @media all and (min-width: 768px) {
@@ -164,6 +168,14 @@
 	}
 
 	.wrapper-logo .logo-large-screen {
+		display: block;
+	}
+
+	.modal-hint-large .modal-content .small-hint-img {
+		display: none;
+	}
+
+	.modal-hint-large .modal-content .large-hint-img {
 		display: block;
 	}
 
