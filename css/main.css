@@ -16,6 +16,8 @@ main {
 	animation-name: emergenceBlock;
 	animation-duration: 1s;
 	animation-iteration-count: 1;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 @-webkit-keyframes emergenceBlock {
@@ -88,7 +90,7 @@ main {
 	display: block;
 	border: 2px solid black;
 	place-self: center;
-	width:100%;
+	width: 100%;
 	letter-spacing: 1px;
 	padding: 8px;
 	border-radius: 5px;
@@ -107,11 +109,11 @@ main {
 	transform: translateY(1px);
 }
 
-.shift p.time:nth-child(1),
+/* .shift p.time:nth-child(1),
 .shift p.time:nth-child(2){
 	animation-name: examplePressedButtonTime;
-	animation-duration: 4s;
-}
+	animation-duration: 3.5s;
+} */
 
 @-webkit-keyframes examplePressedButtonTime{
 	50% {
