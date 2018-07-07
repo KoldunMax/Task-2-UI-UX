@@ -44,7 +44,7 @@ main {
 	color: white;
 	transition: 1s;
 	animation-name: examplePressedButton;
-	animation-duration: 2s;
+	animation-duration: 1s;
 	box-shadow: 0px 8px rgba(0,0,0,.5);
 	cursor: pointer;
 }
@@ -107,14 +107,10 @@ main {
 	transform: translateY(1px);
 }
 
-.shift p.time:nth-child(1) {
+.shift p.time:nth-child(1),
+.shift p.time:nth-child(2){
 	animation-name: examplePressedButtonTime;
-	animation-duration: 6s;
-}
-
-.shift p.time:nth-child(2) {
-	animation-name: examplePressedButtonTime;
-	animation-duration: 6s;
+	animation-duration: 4s;
 }
 
 @-webkit-keyframes examplePressedButtonTime{
@@ -155,7 +151,7 @@ main {
 	margin-right: auto;
 	border-radius: 10px;
 	box-shadow: 0px 8px rgba(0,0,0,.5);
-	animation: examplePressedButtonShift 3s;
+	animation: examplePressedButtonShift 2s;
 	text-align: center;
 	cursor: pointer;
 	transition: 1s;
@@ -203,7 +199,20 @@ h4.title-shift span {
 .wrapper-shifts .fa-sun-o {
 	color: orange;
 	margin-left: 15px;
-	animation: rotatingSun 4s infinite linear, changeColor 3s; 
+	animation: rotatingSun 4s infinite linear, changeColor 2s; 
+}
+
+.wrapper-shifts .fa-moon-o {
+	margin-left: 15px;
+}
+
+.wrapper-shifts .icon-evening {
+	color: rgb(255,69,0);
+} 
+
+.wrapper-shifts h4.shift-evening-title img {
+	height: 32px;
+	margin-left: 15px;
 }
 
 @-webkit-keyframes changeColor {
